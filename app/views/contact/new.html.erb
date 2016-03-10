@@ -1,0 +1,31 @@
+<h1> Create New Contact </h1>
+
+<% form_for :contact, :url =>{action=>'create'} do |f| %>
+	<p> <label for="contact_first_name"> First Name: </label>
+	<%= f.text_field 'contact', 'first_name' %></p>
+
+	<p><label for="contact_last_name"> Last Name: </label>
+	<%= f.text_field 'contact', 'last_name' %></p>
+
+	<p><label for="contact_address"> Address: </label>
+	<%= f.text_field 'contact', 'address' %></p>
+
+	<p><label for="contact_city"> City: </label>
+	<%= f.text_field 'contact', 'city' %></p>
+
+	<p><label for="contact_state"> State: </label>
+	<%= f.text_field 'contact', 'state' %></p>
+
+	<p><label for="contact_country"> Country: </label>
+	<%= f.text_field 'contact', 'country' %></p>
+
+	<p><label for="contact_phone"> Phone: </label>
+	<%= f.text_field 'contact', 'phone' %></p>
+
+	<p><label for="contact_first_name"> Email: </label>
+	<%= f.text_field 'contact', 'email' %></p>
+
+	<%= f.submit "Create" %>
+	<% end %>
+
+	<p> <%= link_to 'Back', {:action => 'index'} %></p>
